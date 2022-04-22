@@ -1,0 +1,219 @@
+/*общая стилизация не включая буутстрап*/
+html {
+font-family: 'Merriweather', serif;
+font-family: 'Noto Sans', sans-serif;
+margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Noto+Sans:wght@400;700&display=swap');
+
+.navbar .megamenu{ padding: 1rem; }
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+	
+}	
+/* ============ desktop view .end// ============ */
+
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+		overflow-y: auto;
+	    max-height: 90vh;
+	    margin-top:10px;
+	}
+}
+
+.dropdown-hover:hover>.dropdown-menu {
+  display: inline-block;
+}
+
+.dropdown-hover>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
+.w__h__img {
+    max-width: 100%;
+    max-height: 450px;
+}
+
+img {
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .center__h1__popular {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .img_back_none {
+        display: none;
+    }
+}
+
+@media (max-width:767px) {
+    .catalog__button {
+       justify-content: center;
+    }
+    
+}
+
+@media (max-width:1200px) {
+    .center_card {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+  .swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .carousel-control-next, .carousel-control-prev {
+      width: 48px;
+      height: 48px;
+      justify-content: center;
+  }
+
+
+  .multisteps-form__progress {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+  .multisteps-form__progress-btn {
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    position: relative;
+    padding-top: 20px;
+    color: rgba(108, 117, 125, 0.7);
+    text-indent: -9999px;
+    border: none;
+    background-color: transparent;
+    outline: none !important;
+    cursor: pointer;
+  }
+  @media (min-width: 500px) {
+    .multisteps-form__progress-btn {
+      text-indent: 0;
+    }
+  }
+  .multisteps-form__progress-btn:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 13px;
+    height: 13px;
+    content: '';
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+  .multisteps-form__progress-btn:after {
+    position: absolute;
+    top: 5px;
+    left: calc(-50% - 13px / 2);
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: currentColor;
+    z-index: 1;
+  }
+  .multisteps-form__progress-btn:first-child:after {
+    display: none;
+  }
+  .multisteps-form__progress-btn.js-active {
+    color: #1A8AAD;
+  }
+  .multisteps-form__progress-btn.js-active:before {
+    -webkit-transform: translateX(-50%) scale(1.2);
+            transform: translateX(-50%) scale(1.2);
+    background-color: currentColor;
+  }
+  .multisteps-form__form {
+    position: relative;
+  }
+  .multisteps-form__panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .multisteps-form__panel.js-active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .multisteps-form__panel[data-animation="scaleIn"] {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .multisteps-form__panel[data-animation="scaleIn"].js-active {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  
+  .filterDiv {
+    display: none; /* Скрыто по умолчанию */
+  }
+  
+  /* В класс "show" добавляется к отфильтрованные элементы */
+  .show {
+    display: flex;
+  }
+  
+  /* Стиль кнопок */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    cursor: pointer;
+  }
+
+  
+  /* Добавить темный фон для активной кнопки */
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
