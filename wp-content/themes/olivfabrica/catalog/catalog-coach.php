@@ -1,3 +1,13 @@
+<?php
+/*
+Template Name: classic-style
+
+*/
+
+
+?>
+<?php get_header(); ?>
+<main style="margin-top:180px;">
 <div class="container p-0 m-0 m-auto">
 <div class="row">
 <nav aria-label="breadcrumb">
@@ -54,7 +64,7 @@ foreach ($filters as $filters): ?>
 
 <div class="filterDiv col-lg-3 col-sm-6 mb-3 center_card <?php echo $filters ["color_id"];?> <?php echo $category_name; ?>">
 <div class="card mb-2 b-0 rounded-0">
-<img src="/img/card_tov/<?php echo $filters ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $filters ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
 <div class="card-body">
 <h5 class="card-title m-0">Название: <?php echo $filters ["tittle"];?></h5>
 <p class="card-text m-0">Стиль: <?php echo $filters ["style"];?></p>
@@ -76,9 +86,6 @@ style="padding: 1% 2% 1% 2%;">от <?php echo $filters ["price"];?> ₽ &#8594;<
 
 </div>
 </div>
-<?php require '../block-item/forms-free-design.php'; ?>
 
-
-</body>
-
-</html>
+</main>
+<?php get_footer(); ?>

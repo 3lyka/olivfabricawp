@@ -40,7 +40,7 @@
                                     <div class="col-megamenu">
                                         <h6 class="title">Кухни</h6>
                                         <ul class="list-unstyled lh-lg">
-                                            <li><a class="text-decoration-none text-dark" href="<?php bloginfo('template_url'); ?>/catalog/catalog-coach" >Классический стиль</a></li>
+                                            <li><a class="text-decoration-none text-dark" href="<?php bloginfo('template_url'); ?>/catalog/classic-style/" >Классический стиль</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Современный стиль</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Хай-тек кухни</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Кухни в стиле модерн</a></li>
@@ -66,10 +66,7 @@
                                         <ul class="list-unstyled lh-lg">
                                             <li><a class="text-decoration-none text-dark" href="/catalog/catalog-closet.php">Custom Menu</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Custom Menu</a></li>
-                                            <li><a class="text-decoration-none text-dark" href="#">Custom Menu</a></li>
-                                            <li><a class="text-decoration-none text-dark" href="#">Custom Menu</a></li>
-                                            <li><a class="text-decoration-none text-dark" href="#">Custom Menu</a></li>
-                                            <li><a class="text-decoration-none text-dark" href="#">Custom Menu</a></li>
+
                                         </ul>
                                     </div>  <!-- col-megamenu.// -->
                                 </div><!-- end col-3 -->

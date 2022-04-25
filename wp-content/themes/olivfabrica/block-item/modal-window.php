@@ -7,27 +7,12 @@
                 </div>
                 <p class="ms-3">Оставьте свои контакты и мы свяжемся <br> с вами в течении 10 минут.</p>
                 <div class="modal-body">
-                    <form class="form" id="myForm" role="form">
+                    <form class="form lh-lg" id="myForm" role="form">
                         <div class="mb-1">
-                            <label for="inputName">Введите имя:</label>
-                            <input type="text" class="form-control" name="name" id="inputName" placeholder="Введите имя">
-                        </div>
-                        <div class="mb-3">
-                            <label for="recipient-tel" class="col-form-label">Номер телефона:</label>
-                            <input
-                                type="tel"
-                                class="phone-field form-control rounded-0"
-                                name="phone"
-                                placeholder="+7(___)___-____"
-                                data-rule-required="true"
-                                data-rule-minlength="10"
-                                data-msg="Введите номер телефона"
-                            />
+                        <?php echo do_shortcode('[contact-form-7 id="14" title="Contact form"]'); ?>
+
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn rounded-0 text-white start-0" style="background-color:#07607C" >Оставить заявку</button>
                 </div>
             </div>
         </div>
