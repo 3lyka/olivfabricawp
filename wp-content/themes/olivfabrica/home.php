@@ -10,8 +10,6 @@ Template Name: home
 
 <?php get_header(); ?>
 
-<?php require 'db.php'; ?>
-
 <?php require 'block-item/main-slider.php'; ?>
 
 <?php require 'block-item/popular-tov.php'; ?>
