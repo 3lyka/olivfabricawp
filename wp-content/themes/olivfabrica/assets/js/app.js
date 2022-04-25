@@ -1,7 +1,8 @@
 /* js Элементы */
 //swiper товаров
 
-var swiper = new swiper(".mySwiper", {
+
+var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
   watchOverflow:true,
@@ -33,7 +34,9 @@ var swiper = new swiper(".mySwiper", {
       spaceBetween: 50,
     },
   },
-})
+});
+
+
 
 //валидация модального окна
 

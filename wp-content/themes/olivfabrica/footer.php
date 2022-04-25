@@ -50,16 +50,8 @@
                     </div>
                 </div>
             </div>
-            <div class="text-white ms-2 p-3">
-                <script>
-                    function y2k(number) { return (number < 1000) ? number + 1900 : number; }
-                    var today = new Date();
-                    var year = y2k(today.getYear());
-                    document.write('Digital Agency IMOS © '+year+' Devoloper Гараев Вадим');
-                </script>
-            </div>
+            <?php wp_footer();?>
         </footer>
     </div>
-
 </body>
 </html>
