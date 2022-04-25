@@ -19,13 +19,13 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
 <div class="carousel-item active">
-<img src="img/slider/slider-1.png" class="d-block w-100" alt="...">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/slider/slider-1.png" class="d-block w-100" alt="...">
 </div>
 <div class="carousel-item">
-<img src="img/slider/slider-1.png" class="d-block w-100" alt="...">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/slider/slider-1.png" class="d-block w-100" alt="...">
 </div>
 <div class="carousel-item">
-<img src="img/slider/slider-1.png" class="d-block w-100" alt="...">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/slider/slider-1.png" class="d-block w-100" alt="...">
 </div>
 </div>
 <button class="carousel-control-next border border-4 border-white position-absolute bottom-0 start-0 ms-5" style="background-color:#1A8AAD;" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">

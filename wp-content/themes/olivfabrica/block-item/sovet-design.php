@@ -8,7 +8,7 @@
                         <div class="rev">
                             <div class="card-body">
                                 <div class="good_company d-flex justify-content-start mb-2">
-                                    <img src="img/rev/Константин.png" class="img-thumbnail" alt="...">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/rev/Константин.png" class="img-thumbnail" alt="...">
                                     <p class="card-title mt-4 ms-3"> <b> Константин </b><br>
                                                 Стаж: 10 лет
                                     </p>
@@ -23,7 +23,7 @@
                         <div class="rev">
                             <div class="card-body">
                                 <div class="good_company d-flex justify-content-start mb-2">
-                                    <img src="img/rev/Константин.png" class="img-thumbnail" alt="...">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/rev/Константин.png" class="img-thumbnail" alt="...">
                                     <p class="card-title mt-4 ms-3"> <b> Леша </b><br>
                                                 Стаж: 10 лет
                                     </p>
@@ -38,7 +38,7 @@
                         <div class="rev">
                             <div class="card-body">
                                 <div class="good_company d-flex justify-content-start mb-2">
-                                    <img src="img/rev/Константин.png" class="img-thumbnail" alt="...">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/rev/Константин.png" class="img-thumbnail" alt="...">
                                     <p class="card-title mt-4 ms-3"> <b> Дима </b><br>
                                                 Стаж: 10 лет
                                     </p>

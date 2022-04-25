@@ -13,7 +13,7 @@ foreach ($swipers as $swipers): ?>
 <?php $category_name = get_category_by_id($swipers["category_id"]); ?>
 <div class="swiper-slide mb-5">
 <div class="card b-0 rounded-0">
-<img src="assets/img/card_tov/<?php echo $swipers ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $swipers ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
 <div class="card-body">
 <h5 class="card-title m-0">Название: <?php echo $swipers ["tittle"];?></h5>
 <p class="card-text m-0">Стиль: <?php echo $swipers ["style"];?></p>

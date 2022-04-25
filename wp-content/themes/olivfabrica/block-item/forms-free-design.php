@@ -1,6 +1,6 @@
 <div class="container mb-5">
         <div class="row justify-content-center" style="background-color: #1A8AAD;">
-            <div class="col-md-6 mb-0" style="background-image: url(/img/banner.png);background-repeat: no-repeat;">
+            <div class="col-md-6 mb-0" style="background-image: url(<?php bloginfo('template_url'); ?>/assets/img/banner.png);background-repeat: no-repeat;">
                 <h4 class="ms-4 mt-5 text-white">
                     Бесплатная <br>
                             консультация <br>

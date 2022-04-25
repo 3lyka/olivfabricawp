@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <a class="text-decoration-none" href="/index.php">
             <div class="good_company d-flex justify-content-start">
-                <img src="/img/logo/logo.svg" class="img-fluid rounded-0" alt="...">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/logo/logo.svg" class="img-fluid rounded-0" alt="...">
                 <p class="mt-3 ms-2 fw-bold" style="color: #127A7B;">Оливковая ветвь</p>
             </div>
             </a>
@@ -83,7 +83,7 @@
             </div> <!-- navbar-collapse.// -->
         </div>
         <a class="navbar-brand" href="#"><span class="fw-bold fs-5"> 8 812 317 22 42 </span>
-            <br><img src="/img/logo/map-pin.svg" alt="" class="p-0 m-0"><span class="fs-6"> Санкт Петербург</span></a> <!-- container-fluid.// -->
+            <br><img src="<?php bloginfo('template_url'); ?>/assets/img/logo/map-pin.svg" alt="" class="p-0 m-0"><span class="fs-6"> Санкт Петербург</span></a> <!-- container-fluid.// -->
         </nav>
 
     </div>

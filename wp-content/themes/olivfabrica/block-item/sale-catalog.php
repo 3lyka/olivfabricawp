@@ -17,7 +17,7 @@ foreach ($slide as $slide): ?>
 <p class="m-0 p-2 position-absolute top-0 start-0 text-white b-0"
 style="background-color: #07607C;"><?php echo $slide ["sale"];?>%</p>
 <!--Карточка с акцией-->
-<img src="/img/card_tov/<?php echo $slide ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $slide ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
 <div class="card-body">
 <h5 class="card-title m-0">Название: <?php echo $slide ["tittle"];?></h5>
 <p class="card-text m-0">Стиль: <?php echo $slide ["style"];?></p>

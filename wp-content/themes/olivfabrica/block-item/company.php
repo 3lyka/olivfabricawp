@@ -1,7 +1,7 @@
 <div class="container mt-5" id="company">
 
 <div class="row">
-<img src="img/card_tov/card-tovar.png" class="col-sm-6 mt-4 w__h__img" alt="...">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/card-tovar.png" class="col-sm-6 mt-4 w__h__img" alt="...">
 <div class="col-sm-6 mt-5">
 <h3>О нас</h3>
 <p class="lh-lg">

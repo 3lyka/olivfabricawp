@@ -1,13 +1,10 @@
-<div class="container">
-        <div class="row">
-            <div class="card text-white w-100 rounded-0" style="max-height: 1000px; background-color: #1A8AAD;">
-                <img src="img/banner-bottom.png" class="position-absolute top-50 end-0 translate-middle-y p-5 w__h__img" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title position-absolute top-50 start-25 translate-middle-y p-5">Основные <br> элементы
-                        <br> кухонь
-                    </h5>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container img_back_none">
+<div class="row bg-info">
+<div class="col-md-6">
+<h3 class="text-white p-5 mt-3">Основные <br> элементы <br> кухонь</h3>
+</div>
+<div class="col-md-6">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/banner-bottom.png" alt="..." style="height: 20em;">
+</div>
+</div>
     </div>
