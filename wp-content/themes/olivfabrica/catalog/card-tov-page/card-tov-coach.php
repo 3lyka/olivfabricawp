@@ -1,8 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php require '../../main-parts/head.php'; ?>
-<body>
-<?php require '../../main-parts/header.php'; ?>
+<?php
+/*
+Template Name:card-tov-coach
+
+*/
+
+
+?>
+
+<?php get_header(); ?>
 
 
 <?php $filter = get_filter_by_id($_GET['id']);?>
@@ -54,24 +59,7 @@ style="padding: 1% 1% 1% 1%;">Рассчитать стоимость &#8594;</a
 </div>
 
 </div>
-
-<?php require '../../block-item/popular-tov.php'; ?>
-<?php require '../../block-item/forms-free-design.php'; ?>
 </main>
 
 
-<?php require '../../main-parts/footer.php'; ?>
-
-<!--
-JS файлы
--->
-<!-- Swiper JS -->
-<script src="/js/swiper-bundle.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/jQuery.js"></script>
-<script src="/js/app.js"></script>
-
-<!--
-JS файлы -->
-</body>
-</html>
+<?php get_footer(); ?>

@@ -192,28 +192,3 @@ img {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-
-  
-  .filterDiv {
-    display: none; /* Скрыто по умолчанию */
-  }
-  
-  /* В класс "show" добавляется к отфильтрованные элементы */
-  .show {
-    display: flex;
-  }
-  
-  /* Стиль кнопок */
-  .btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    cursor: pointer;
-  }
-
-  
-  /* Добавить темный фон для активной кнопки */
-  .btn.active {
-    background-color: #666;
-    color: white;
-  }

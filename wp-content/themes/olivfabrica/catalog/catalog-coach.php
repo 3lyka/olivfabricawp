@@ -22,9 +22,9 @@ href="#">Кухни</a></li>
 </nav>
 <h3>Каталог</h3>
 <div id="myBtnContainer" class="m-0 p-3">
-<button class="btn active" onclick="filterSelection('all')">Все товары</button>
-<button class="btn" onclick="filterSelection('hi-tech')" id="coach-hi-tech"> Хай-тек</button>
-<button class="btn" onclick="filterSelection('modern')"> Модерн</button>
+<button class="btn mixitup-control-active" data-filter="all">Все товары</button>
+<button class="btn " data-filter=".hi-tech"> Хай-тек</button>
+<button class="btn" data-filter=".modern"> Модерн</button>
 </div>
 </div>
 </div>
@@ -53,7 +53,7 @@ data-bs-parent="#accordionExample">
 </div>
 </div>
 </div>
-<div class="container mt-4 p-0 m-0 m-auto">
+<div class="container mt-4 p-0 m-0 m-auto" data-ref="mixitup-container">
 <div class="row">
 
 <?php
@@ -62,7 +62,7 @@ foreach ($filters as $filters): ?>
 
 <?php $category_name = get_category_by_id($filters["category_id"]); ?>
 
-<div class="filterDiv col-lg-3 col-sm-6 mb-3 center_card <?php echo $filters ["color_id"];?> <?php echo $category_name; ?>">
+<div class="filterDiv filter col-lg-3 col-sm-6 mb-3 center_card <?php echo $filters ["color_id"];?> <?php echo $category_name; ?>" data-ref="mixitup-target">
 <div class="card mb-2 b-0 rounded-0">
 <img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $filters ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
 <div class="card-body">

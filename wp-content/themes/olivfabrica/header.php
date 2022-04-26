@@ -40,7 +40,7 @@
                                     <div class="col-megamenu">
                                         <h6 class="title">Кухни</h6>
                                         <ul class="list-unstyled lh-lg">
-                                            <li><a class="text-decoration-none text-dark" href="<?php bloginfo('template_url'); ?>/catalog/classic-style/" >Классический стиль</a></li>
+                                            <li><a class="text-decoration-none text-dark" href="<?php bloginfo('template_url'); ?>/catalog/classic-style/">Классический стиль</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Современный стиль</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Хай-тек кухни</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Кухни в стиле модерн</a></li>
@@ -73,10 +73,10 @@
                             </div><!-- end row --> 
                         </div> <!-- dropdown-mega-menu.// -->
                     </li>
-                    <li class="nav-item active fw-normal"> <a class="nav-link" href="<?php bloginfo('template_url'); ?>page/buy.php">Оплата </a> </li>
+                    <li class="nav-item active fw-normal"> <a class="nav-link" href="<?php bloginfo('template_url'); ?>/page/contacts/">Оплата </a> </li>
                     <li class="nav-item active fw-normal"> <a class="nav-link" href="/catalog/catalog-sale.php">Акции </a> </li>
                     <li class="nav-item active fw-normal"> <a class="nav-link" href="#">О компании </a> </li>
-                    <li class="nav-item active fw-normal"> <a class="nav-link" href="http://olivfabrica/page/buy.php">Контакты </a> </li>
+                    <li class="nav-item active fw-normal"> <a class="nav-link" href="<?php bloginfo('template_url'); ?>/page/contacts/">Контакты </a> </li>
                 </ul>
             </div> <!-- navbar-collapse.// -->
         </div>

@@ -10,6 +10,7 @@ wp_enqueue_style( 'swiper-bundle', get_template_directory_uri() . '/assets/css/s
 	function theme_name_scripts() {
 	wp_enqueue_script( 'swiper-bundle', get_template_directory_uri() . '/assets/js/swiper-bundle.js', array('jquery'), 'null', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery'), 'null', true );
+	wp_enqueue_script( 'mixitup', get_template_directory_uri() . '/assets/js/mixitup.min.js', array('jquery'), 'null', true);
 	wp_enqueue_script( 'app', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), 'null', true);
 }
 add_theme_support('tittle-tag');
