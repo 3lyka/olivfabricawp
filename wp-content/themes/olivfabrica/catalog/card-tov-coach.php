@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php require '../../main-parts/head.php'; ?>
-<body>
-<?php require '../../main-parts/header.php'; ?>
+<?php
+/*
+
+Template Name: card-tov-coach
+
+*/
 
 
-<?php $filter = get_filterteach_by_id($_GET['id']);?>
+?>
+<?php get_header(); ?>
+
+
+<?php $filter = get_filter_by_id($_GET['id']);?>
 <?php $category_name = get_category_by_id($filters["category_id"]); ?>
 <main style="margin-top: 150px;">
 
@@ -20,10 +25,10 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
 <div class="carousel-item active">
-<img src="/img/card_tov/card-tovar.png" class="d-block w-100" alt="...">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $filter ["img"];?>.png" class="d-block w-100" alt="...">
 </div>
 <div class="carousel-item">
-<img src="/img/slider/slider-1.png" class="d-block w-100" alt="...">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $filter ["img"];?>.png" class="d-block w-100" alt="...">
 </div>
 </div>
 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -46,7 +51,7 @@
 <p class="card-text m-0"><b>от <?php echo $filter ["price"];?> ₽</b></p>
 
 
-<a href="#"
+<a href="<?php bloginfo('template_url'); ?>/page/payment"
 class="btn btn-primary btn-danger b-0 rounded-0 mt-5 d-flex justify-content-center"
 style="padding: 1% 1% 1% 1%;">Рассчитать стоимость &#8594;</a>
 </div>
@@ -54,24 +59,7 @@ style="padding: 1% 1% 1% 1%;">Рассчитать стоимость &#8594;</a
 </div>
 
 </div>
-
-<?php require '../../block-item/popular-tov.php'; ?>
-<?php require '../../block-item/forms-free-design.php'; ?>
 </main>
 
 
-<?php require '../../main-parts/footer.php'; ?>
-
-<!--
-JS файлы
--->
-<!-- Swiper JS -->
-<script src="/js/swiper-bundle.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/jQuery.js"></script>
-<script src="/js/app.js"></script>
-
-<!--
-JS файлы -->
-</body>
-</html>
+<?php get_footer(); ?>

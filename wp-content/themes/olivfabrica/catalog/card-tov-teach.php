@@ -1,16 +1,14 @@
 <?php
 /*
-Template Name:card-tov-coach
+
+Template Name: card-tov-teach
 
 */
 
 
 ?>
-
 <?php get_header(); ?>
-
-
-<?php $filter = get_filter_by_id($_GET['id']);?>
+<?php $filter = get_filterteach_by_id($_GET['id']);?>
 <?php $category_name = get_category_by_id($filters["category_id"]); ?>
 <main style="margin-top: 150px;">
 
@@ -25,10 +23,10 @@ Template Name:card-tov-coach
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
 <div class="carousel-item active">
-<img src="/img/card_tov/card-tovar.png" class="d-block w-100" alt="...">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $filter ["img"];?>.png" class="d-block w-100" alt="...">
 </div>
 <div class="carousel-item">
-<img src="/img/slider/slider-1.png" class="d-block w-100" alt="...">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $filter ["img"];?>.png" class="d-block w-100" alt="...">
 </div>
 </div>
 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -59,7 +57,8 @@ style="padding: 1% 1% 1% 1%;">Рассчитать стоимость &#8594;</a
 </div>
 
 </div>
-</main>
 
+
+</main>
 
 <?php get_footer(); ?>

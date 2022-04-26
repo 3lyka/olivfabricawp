@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/*
+Template Name: catalog-sale
 
-<?php require '../main-parts/head.php'; ?>
+*/
 
-<body>
 
-<?php require '../main-parts/header.php'; ?>
+?>
+<?php get_header(); ?>
 
 <main style="margin-top:160px;">
 <div class="container">
@@ -130,13 +131,13 @@ foreach ($slide as $slide): ?>
 <p class="m-0 p-2 position-absolute top-0 start-0 text-white b-0"
 style="background-color: #07607C;"><?php echo $slide ["sale"];?>%</p>
 <!--Карточка с акцией-->
-<img src="/img/card_tov/<?php echo $slide ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $slide ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
 <div class="card-body">
 <h5 class="card-title m-0">Название: <?php echo $slide ["tittle"];?></h5>
 <p class="card-text m-0">Стиль: <?php echo $slide ["style"];?></p>
 <p class="card-text m-0">Цвет: <?php echo $slide ["color"];?></p>
 <p class="card-text m-0">Материал: <?php echo $slide ["material"];?></p>
-<a href="/catalog/card-tov-page/card-tov-<?php echo $slide ["group_category"];?>.php?id=<?php echo $slide ["id"];?>"
+<a href="<?php bloginfo('template_url'); ?>/card-tov-<?php echo $slide ["group_category"];?>?id=<?php echo $slide ["id"];?>"
 class="btn btn-primary btn-danger b-0 rounded-0 mt-3 ms-2 d-flex justify-content-center"
 style="padding: 1% 2% 1% 2%;">от <?php echo $slide ["price"];?> ₽ &#8594;</a>
 </div>
@@ -148,76 +149,4 @@ style="padding: 1% 2% 1% 2%;">от <?php echo $slide ["price"];?> ₽ &#8594;</a
 </div>
 </div>
 </main>
-
-<?php require '../main-parts/footer.php'; ?>
-
-<!--
-JS файлы
--->
-
-<script>
-    filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Добавить класс "show" (display:block) к отфильтрованным элементам и удалите класс "show" из элементов, которые не выбраны
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-// Показать отфильтрованные элементы
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Скрыть элементы, которые не выбраны
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Добавить активный класс к текущей кнопке управления (выделите ее)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-  $(document).mouseup(function (e){  
-    var div = $(".close-on");  //класс элемента вне которого клик
-    if (!div.is(e.target) && div.has(e.target).length === 0) {  
-            div.removeClass('active');  
-    }
-  });
-}
- </script>
-<!-- Swiper JS -->
-<script src="/js/swiper-bundle.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/jQuery.js"></script>
-<script src="/js/app.js"></script>
-
-<!--
-JS файлы -->
-</body>
-
-</html>
+<?php get_footer(); ?>

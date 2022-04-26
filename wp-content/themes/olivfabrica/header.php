@@ -52,7 +52,7 @@
                                     <div class="col-megamenu">
                                         <h6 class="title">Техника</h6>
                                         <ul class="list-unstyled lh-lg">
-                                            <li><a class="text-decoration-none text-dark" href="/catalog/catalog-teach.php">Мойки</a></li>
+                                            <li><a class="text-decoration-none text-dark" href="<?php bloginfo('template_url'); ?>/catalog/teach/">Мойки</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Смесители</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Варочные панели</a></li>
                                             <li><a class="text-decoration-none text-dark" href="#">Вытяжки</a></li>
@@ -74,7 +74,7 @@
                         </div> <!-- dropdown-mega-menu.// -->
                     </li>
                     <li class="nav-item active fw-normal"> <a class="nav-link" href="<?php bloginfo('template_url'); ?>/page/contacts/">Оплата </a> </li>
-                    <li class="nav-item active fw-normal"> <a class="nav-link" href="/catalog/catalog-sale.php">Акции </a> </li>
+                    <li class="nav-item active fw-normal"> <a class="nav-link" href="<?php bloginfo('template_url'); ?>/catalog/catalog-sale">Акции </a> </li>
                     <li class="nav-item active fw-normal"> <a class="nav-link" href="#">О компании </a> </li>
                     <li class="nav-item active fw-normal"> <a class="nav-link" href="<?php bloginfo('template_url'); ?>/page/contacts/">Контакты </a> </li>
                 </ul>

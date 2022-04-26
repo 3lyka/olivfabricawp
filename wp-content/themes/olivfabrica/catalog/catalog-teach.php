@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/*
+Template Name: teach
 
-<?php require '../main-parts/head.php'; ?>
+*/
 
-<body>
 
-<?php require '../main-parts/header.php'; ?>
+?>
+<?php get_header(); ?>
 
 <main style="margin-top:180px;">
 <div class="container p-0 m-0 m-auto">
@@ -17,7 +18,7 @@ href="#">Главная</a></li>
 <li class="breadcrumb-item active"><a class="text-decoration-none fw-light text-secondary"
 href="#">Каталог</a></li>
 <li class="breadcrumb-item active"><a class="text-decoration-none fw-light text-secondary"
-href="#">Кухни</a></li>
+href="#">Техника</a></li>
 </ol>
 </nav>
 <h3>Каталог</h3>
@@ -109,13 +110,13 @@ foreach ($filtersteach as $filtersteach): ?>
 
 <div class="filterDiv col-lg-3 col-sm-6 mb-3 center_card <?php echo $filtersteach ["color_id"];?> <?php echo $category_name; ?>">
 <div class="card mb-2 b-0 rounded-0">
-<img src="/img/card_tov/<?php echo $filtersteach ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
+<img src="<?php bloginfo('template_url'); ?>/assets/img/card_tov/<?php echo $filtersteach ["img"];?>.png" class="card-img-top p-0 b-0 rounded-0" alt="..." style="height: 14em;">
 <div class="card-body">
 <h5 class="card-title m-0">Название: <?php echo $filtersteach ["tittle"];?></h5>
 <p class="card-text m-0">Стиль: <?php echo $filtersteach ["style"];?></p>
 <p class="card-text m-0">Цвет: <?php echo $filtersteach ["color"];?></p>
 <p class="card-text m-0">Материал: <?php echo $filtersteach ["material"];?></p>
-<a href="card-tov-page/card-tov-teach.php?id=<?php echo $filtersteach ["id"];?>"
+<a href="<?php bloginfo('template_url'); ?>/card-tov-teach?id=<?php echo $filtersteach ["id"];?>"
 class="btn btn-primary btn-danger b-0 rounded-0 mt-3 ms-2 d-flex justify-content-center"
 style="padding: 1% 2% 1% 2%;">от <?php echo $filtersteach ["price"];?> ₽ &#8594;</a>
 </div>
@@ -130,79 +131,7 @@ style="padding: 1% 2% 1% 2%;">от <?php echo $filtersteach ["price"];?> ₽ &#8
 
 </div>
 </div>
-<?php require '../block-item/forms-free-design.php'; ?>
+
 </main>
 
-<?php require '../main-parts/footer.php'; ?>
-
-
-<!--
-JS файлы
--->
-
-<script>
-    filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Добавить класс "show" (display:block) к отфильтрованным элементам и удалите класс "show" из элементов, которые не выбраны
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-// Показать отфильтрованные элементы
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Скрыть элементы, которые не выбраны
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Добавить активный класс к текущей кнопке управления (выделите ее)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-  $(document).mouseup(function (e){  
-    var div = $(".close-on");  //класс элемента вне которого клик
-    if (!div.is(e.target) && div.has(e.target).length === 0) {  
-            div.removeClass('active');  
-    }
-  });
-}
- </script>
-<!-- Swiper JS -->
-<script src="/js/swiper-bundle.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/jQuery.js"></script>
-<script src="/js/app.js"></script>
-
-<!--
-JS файлы -->
-</body>
-
-</html>
+<?php get_footer(); ?>

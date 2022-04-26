@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/*
+Template Name: payment
 
-<?php require '../main-parts/head.php'; ?>
+*/
 
-<body>
 
-<?php require '../main-parts/header.php'; ?>
+?>
+<?php get_header(); ?>
 
 
 <main style="margin-top: 150px;">
@@ -40,27 +41,27 @@ href="#">Расчет стоимости</a></li>
 <div class="form-row">
 <div class="row d-flex justify-content-center">
   <div class="card col-sm-3 col-md-12 m-2 p-0 border-0" style="width: 14rem;height: 18em;">
-    <img src="/img/coach-vybor.png" class="card-img-top" alt="...">
+    <img src="<?php bloginfo('template_url'); ?>/assets/img/coach-vybor.png" class="card-img-top" alt="...">
     <div class="card-body">
       <p class="card-text">Прямая кухня <input class="form-check-input mt-2 ms-3" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></p>
     </div>
   </div>
   <div class="card col-sm-3 col-md-12 m-2 p-0 border-0" style="width: 14rem;height: 18em;">
-    <img src="/img/coach-vybor.png" class="card-img-top" alt="...">
+    <img src="<?php bloginfo('template_url'); ?>/assets/img/coach-vybor.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text">Прямая кухня <input class="form-check-input mt-2 ms-3" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></p>
+      <p class="card-text">Прямая кухня <input class="form-check-input mt-2 ms-3" type="radio" name="radioNoLabel" id="radioNoLabel2" value="" aria-label="..."></p>
     </div>
   </div>
   <div class="card col-sm-3 col-md-12 m-2 p-0 border-0" style="width: 14rem;height: 18em;">
-    <img src="/img/coach-vybor.png" class="card-img-top" alt="...">
+    <img src="<?php bloginfo('template_url'); ?>/assets/img/coach-vybor.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text">Прямая кухня <input class="form-check-input mt-2 ms-3" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></p>
+      <p class="card-text">Прямая кухня <input class="form-check-input mt-2 ms-3" type="radio" name="radioNoLabel" id="radioNoLabel3" value="" aria-label="..."></p>
     </div>
   </div>
   <div class="card col-sm-3 col-md-12 m-2 p-0 border-0" style="width: 14rem;height: 18em;">
-    <img src="/img/coach-vybor.png" class="card-img-top" alt="...">
+    <img src="<?php bloginfo('template_url'); ?>/assets/img/coach-vybor.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text">Прямая кухня <input class="form-check-input mt-2 ms-3" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></p>
+      <p class="card-text">Прямая кухня <input class="form-check-input mt-2 ms-3" type="radio" name="radioNoLabel" id="radioNoLabel4" value="" aria-label="..."></p>
     </div>
   </div>
 </div>
@@ -109,19 +110,13 @@ href="#">Расчет стоимости</a></li>
                 <div class="col-md-6 p-4">
                   <form class="form" id="myForm" role="form">
                       <div class="mb-3">
-                          <label for="inputName" class="form-label">Ваше имя</label>
-                          <input type="text" class="phone-field form-control border-ligth border-2 rounded-0" id="inputName" name="name">
-                          <div class="mb-3 mt-3">
-                              <label for="number" class="form-label">Номер телефона</label>
-                              <input type="tel" name="phone" class="phone-field form-control phone-field border-ligth border-2 rounded-0" id="exampleInputTel" data-rule-required="true" data-rule-minlength="10" >
-                          </div>
+                      <?php echo do_shortcode('[contact-form-7 id="14" title="Contact form"]'); ?>
                   </form>
               </div>
               </div>
             </div>
             <div class="button-row d-flex mt-4">
               <button class="btn js-btn-prev" type="button" title="Prev">Назад</button>
-              <button class="btnbtn bg-info text-white border-0 rounded-0 ml-auto js-btn-next" type="button" title="Send">Отправить</button>
             </div>
           </div>
         </div>
@@ -131,7 +126,7 @@ href="#">Расчет стоимости</a></li>
 </div>
 </main>
 
-<?php require '../main-parts/footer.php'; ?>
+
 
 <!--внутренний скрипт-->
 <script>
@@ -247,18 +242,4 @@ window.addEventListener('load', setFormHeight, false);
 window.addEventListener('resize', setFormHeight, false);
 </script>
 
-<!--
-JS файлы
--->
-<!-- Swiper JS -->
-
-<script src="/js/swiper-bundle.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/jQuery.js"></script>
-<script src="/js/app.js"></script>
-
-<!--
-JS файлы
--->
-</body>
-</html>
+<?php get_footer(); ?>

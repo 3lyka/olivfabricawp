@@ -70,7 +70,7 @@ foreach ($filters as $filters): ?>
 <p class="card-text m-0">Стиль: <?php echo $filters ["style"];?></p>
 <p class="card-text m-0">Цвет: <?php echo $filters ["color"];?></p>
 <p class="card-text m-0">Материал: <?php echo $filters ["material"];?></p>
-<a href="http://olivfabrica/catalog/card-tov-page/card-tov-coach.php?id=<?php echo $filters ["id"];?>"
+<a href="<?php bloginfo('template_url'); ?>/card-tov-coach?id=<?php echo $filters ["id"];?>"
 class="btn btn-primary btn-danger b-0 rounded-0 mt-3 ms-2 d-flex justify-content-center"
 style="padding: 1% 2% 1% 2%;">от <?php echo $filters ["price"];?> ₽ &#8594;</a>
 </div>
